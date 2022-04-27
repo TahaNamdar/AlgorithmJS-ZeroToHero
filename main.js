@@ -90,3 +90,54 @@ function findMaxOfArray(array) {
 function findMinOfArray(array) {
   console.log(Math.min(...array));
 }
+
+//Question11;
+
+let count = 0;
+
+for (let j = 2; j <= 100; j++) {
+  for (let i = 1; i <= j; i++) {
+    if (j % i == 0) count++;
+  }
+
+  if (count == 2) console.log(j);
+  count = 0;
+}
+
+//Question12;
+
+function findPrimeNumbers(array) {
+  numArray = array.filter((number) => {
+    for (var i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) return false;
+    }
+    return true;
+  });
+
+  console.log(numArray);
+}
+
+//Question13;
+function countOfOddEven(array) {
+  const evenArray = array.filter((num) => num % 2 === 0);
+  const oddArray = array.filter((num) => num % 2 !== 0);
+  console.log(evenArray.length, oddArray.length);
+}
+
+//Question14;
+const sumOfArray = (array) => {
+  const sumValue = array.reduce((acc, current) => {
+    return acc + current;
+  });
+  console.log(sumValue);
+};
+
+const array = [1, 2, 3, 4];
+let sum = 0;
+
+for (let i = 0; i < array.length; i++) {
+  sum += array[i];
+}
+console.log(sum);
+
+//Question15;
