@@ -132,12 +132,35 @@ const sumOfArray = (array) => {
   console.log(sumValue);
 };
 
-const array = [1, 2, 3, 4];
+const myArray = [1, 2, 3, 4];
 let sum = 0;
 
-for (let i = 0; i < array.length; i++) {
-  sum += array[i];
+for (let i = 0; i < myArray.length; i++) {
+  sum += myArray[i];
 }
 console.log(sum);
 
 //Question15;
+function reverse(array) {
+  var output = [];
+  while (array.length) {
+    output.push(array.pop());
+  }
+
+  return output;
+}
+
+//Question16;
+
+function removeDuplicate(array) {
+  let newArray = [...new Set(array)];
+  console.log(newArray);
+}
+
+let array = ["A", "B", "A", "C", "B"];
+let newArray = [];
+array.forEach((item) => {
+  if (!newArray.includes(item)) {
+    newArray.push(item);
+  }
+});
