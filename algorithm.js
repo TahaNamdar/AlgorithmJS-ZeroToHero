@@ -132,10 +132,35 @@ function removeDuplicates(arrayOfNumbers) {
 }
 
 function duplicateOccurance(arrayOfNumbers) {
-  return arrayOfNumbers.reduce((acc, current) => {
+  arrayOfNumbers.reduce((acc, current) => {
     return {
       ...acc,
       [current]: acc[current] ? acc[current] + 1 : 1,
     };
   }, {});
 }
+
+const users = [
+  { id: 1, name: "taha", age: 12 },
+  { id: 2, name: "ali", age: 22 },
+  { id: 3, name: "mamad", age: 42 },
+];
+
+const contactInfo = [
+  { userId: 1, mobile: 0122222 },
+  { userId: 2, email: "taha@gmail.com" },
+  { userId: 3 },
+];
+
+const Users = users.map((user) => {
+  const findItem = contactInfo.find((userInfo) => userInfo.userId === user.id);
+  return {
+    id: user.id,
+    name: user.name,
+    age: user.age,
+    ...(findItem.mobile && { mobile: findItem.mobile }),
+    ...(findItem.email && { email: findItem.email }),
+  };
+});
+
+console.log(Users);
