@@ -37,10 +37,30 @@ function fib2(n) {
 }
 
 //3
+
 function fib3(n) {
+  fibonacciSeries = [0, 1];
+  if (n <= 1) {
+    console.log(fibonacciSeries[0]);
+  }
+  if (n == 2) {
+    console.log(...fibonacciSeries);
+  }
+  if (n > 2) {
+    for (let i = 1; i <= n - 2; i++) {
+      fibonacciSeries.push(
+        fibonacciSeries[fibonacciSeries.length - 1] +
+          fibonacciSeries[fibonacciSeries.length - 2]
+      );
+    }
+    console.log(...fibonacciSeries);
+  }
+}
+//4
+function fib4(n) {
   return new Array(n).fill(1).reduce((arr, _, i) => {
     arr.push(i <= 1 ? i : arr[i - 2] + arr[i - 1]);
     return arr;
   }, []);
 }
-console.log(fib3(5));
+console.log(fib4(5));
