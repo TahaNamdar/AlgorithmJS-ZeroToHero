@@ -17,7 +17,6 @@ function fib1(n) {
     b = c;
   }
 }
-fib1(5);
 //2
 
 function fib2(n) {
@@ -58,9 +57,11 @@ function fib3(n) {
 }
 //4
 function fib4(n) {
-  return new Array(n).fill(1).reduce((arr, _, i) => {
-    arr.push(i <= 1 ? i : arr[i - 2] + arr[i - 1]);
-    return arr;
-  }, []);
+  return Array(n)
+    .fill(1)
+    .reduce((arr, _, i) => {
+      arr.push(i <= 1 ? i : arr[i - 2] + arr[i - 1]);
+      return arr;
+    }, []);
 }
 console.log(fib4(5));
