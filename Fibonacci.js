@@ -58,11 +58,9 @@ function fib3(n) {
 }
 //4
 function fib4(n) {
-  return Array(n)
-    .fill(1)
-    .reduce((arr, _, i) => {
-      arr.push(i <= 1 ? i : arr[i - 2] + arr[i - 1]);
-      return arr;
-    }, []);
+  return new Array(n).fill(1).reduce((acc, _, current) => {
+    acc.push(current <= 1 ? current : acc[current - 2] + acc[current - 1]);
+    return acc;
+  }, []);
 }
 console.log(fib4(10));
