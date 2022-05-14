@@ -64,4 +64,4 @@ function fib4(n) {
       return arr;
     }, []);
 }
-console.log(fib4(5));
+console.log(fib4(10));
