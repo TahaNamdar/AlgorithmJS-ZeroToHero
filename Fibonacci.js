@@ -17,6 +17,7 @@ function fib1(n) {
     b = c;
   }
 }
+
 //2
 
 function fib2(n) {
