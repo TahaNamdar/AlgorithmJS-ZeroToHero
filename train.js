@@ -36,12 +36,13 @@ const findMaxAge = people.reduce((acc, current) => {
 console.log(findMaxAge, "Max Age");
 
 const order = [
-  { id: 1, name: "taha", age: 12, ordered: "pizza" },
-  { id: 2, name: "test", age: 12, ordered: "pizza" },
+  { id: 1, name: "test", age: 12, ordered: "pizza" },
+  { id: 1, name: "test0", age: 12, ordered: "pizza" },
+  { id: 2, name: "test1", age: 12, ordered: "pizza" },
   { id: 3, name: "test2", age: 12, ordered: "pizza" },
-  { id: 4, name: "mamad", age: 12, ordered: "pizza" },
-  { id: 5, name: "ali", age: 22, ordered: "burger" },
-  { id: 6, name: "hesam", age: 42 },
+  { id: 4, name: "test3", age: 12, ordered: "pizza" },
+  { id: 5, name: "test4", age: 22, ordered: "burger" },
+  { id: 6, name: "test5", age: 42 },
 ];
 
 counterItem = order.reduce((acc, statusOrder) => {
@@ -50,3 +51,4 @@ counterItem = order.reduce((acc, statusOrder) => {
 
 console.log(counterItem, "counterItem");
 
+ 

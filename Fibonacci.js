@@ -64,3 +64,5 @@ function fib4(n) {
   }, []);
 }
 console.log(fib4(10));
+
+console.log("test");

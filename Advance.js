@@ -25,4 +25,4 @@ const removeDuplicates = folderContents.reduce((acc, item) => {
   return acc.includes(item) ? acc : [...acc, item];
 }, []);
 
-console.log(removeDuplicates, "remove duDlicates");
+console.log(removeDuplicates, "remove duplicates");
