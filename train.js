@@ -35,14 +35,15 @@
 
 // console.log(findMaxAge, "Max Age");
 
-// const order = [
-//   { id: 1, name: "taha", age: 12, ordered: "pizza" },
-//   { id: 2, name: "test", age: 12, ordered: "pizza" },
-//   { id: 3, name: "test2", age: 12, ordered: "pizza" },
-//   { id: 4, name: "mamad", age: 12, ordered: "pizza" },
-//   { id: 5, name: "ali", age: 22, ordered: "burger" },
-//   { id: 6, name: "hesam", age: 42 },
-// ];
+const order = [
+  { id: 1, name: "taha", age: 12, ordered: "pizza" },
+  { id: 1, name: "taha", age: 12, ordered: "pizza" },
+  { id: 2, name: "test", age: 12, ordered: "pizza" },
+  { id: 3, name: "test2", age: 12, ordered: "pizza" },
+  { id: 4, name: "mamad", age: 12, ordered: "pizza" },
+  { id: 5, name: "ali", age: 22, ordered: "burger" },
+  { id: 6, name: "hesam", age: 42 },
+];
 
 // counterItem = order.reduce((acc, statusOrder) => {
 //   return { ...acc, [statusOrder.ordered]: (acc[statusOrder.ordered] || 0) + 1 };
@@ -50,3 +51,4 @@
 
 // console.log(counterItem, "counterItem");
 
+ 
